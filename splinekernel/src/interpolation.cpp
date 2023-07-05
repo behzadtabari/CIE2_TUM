@@ -76,8 +76,7 @@ ControlPointsAndKnotVector interpolateWithBSplineCurve( const ControlPoints2D& i
 }
 
 //first step, we need to create t_k = [...] using centripetal technique
-// here the tutors do not gave us an exeption and I guess there is none but let first write
-//the simple code and then if needed we will generate also exception for this one as well
+
 
 std::vector<double> centripetalParameterPositions( const ControlPoints2D& interpolationPoints )
 {
@@ -131,8 +130,7 @@ std::vector<double> knotVectorUsingAveraging( const std::vector<double>& paramet
     for (std :: size_t i = 0 ; i < (n -(polynomialDegree+1)) ; i++)
     {
         double temp{0};
-        // for now we'll write this with a for loop but after first successful run we'll try to use std :: acculumulate
-        // temp = std :: accumulate (parameterPositions.begin(),parameterPositions[])
+       
             for(std :: size_t j = 1 ; j < (polynomialDegree+1);j++){
              temp = temp+parameterPositions[i+j];
             }
